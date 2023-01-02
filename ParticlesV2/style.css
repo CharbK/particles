@@ -1,0 +1,86 @@
+:root {
+    --green: rgb(53, 253, 113);
+    --blue: rgb(0, 98, 234);
+    --dark: rgb(20, 20, 20);
+}
+
+body {  
+  background-color: var(--dark);
+  margin: 0px;
+}
+
+.side {
+  display: grid;
+  height: 100vh;
+  overflow: hidden;
+  place-items: center;
+  position: absolute;
+  width: 100%;
+}
+
+.side .title {
+  font-family: "Rubik", sans-serif;
+  font-size: 8vw;
+  margin: 0px 10vw;
+  width: 80vw;
+}
+
+.side .fancy {
+  font-family: "Lobster", cursive;
+  font-size: 1.3em;
+  line-height: 0.8em;
+}
+
+#left-side {
+  background-color: var(--blue);
+  width: 60%;
+  /*z-index: 2;*/
+}
+
+#left-side .title {  
+  color: white;  
+}
+
+#left-side .fancy {
+  color: var(--green);
+}
+
+#right-side {
+  background-color: var(--green);
+}
+
+#right-side .title {
+  color: var(--dark);
+}
+
+#right-side .fancy {
+  color: white;
+}
+.start {
+  border-radius: 6px;
+  position: absolute;
+  border: none;
+  color: rgb(177, 164, 164);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 45px;
+  z-index: 2;
+  cursor: pointer;
+  border: 4px solid black;
+  border-color: rgb(177, 164, 164);
+  margin-left: 10%;
+  margin-top: 37%;
+}
+.start:hover{
+  border: 4px solid black;
+  border-color: black;
+  background-color: #f4e736;
+  color: rgb(68, 68, 68);
+  content: '\00bb';
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s
+}
