@@ -2,7 +2,7 @@
 - This project was first created by Charbel Kassab and Alec Riopel in 2022.
 - We made a little prototype in JavaScript in about 100 lines.
 
-```
+```js
 canvas = document.getElementById("particles").getContext('2d')
 
 draw = (x, y, c, s) => {
