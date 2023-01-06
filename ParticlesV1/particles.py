@@ -49,15 +49,18 @@ def rule(particules1, particules2, g):
             a["vy"] *=-1        
 
 
-yellow = create(100, "yellow")
-red = create(100, "red")
+yellow = create(window_size // 3, "yellow")
+red = create(window_size // 3, "red")
 
 run = True
 while run:
+    
     window.fill(0)
+    
     rule(red, red, 0.1)
     rule(red, yellow, -0.15)
     rule(yellow, yellow, -0.1)
+    
     for i in range(len(particules)):
         draw(window,  particules[i]["x"], particules[i]["y"], particules[i]["color"], 3)
         
