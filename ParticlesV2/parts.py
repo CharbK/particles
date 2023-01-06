@@ -1,10 +1,12 @@
-import pygame
 import random
+
+import pygame
 
 particules=[]
 window_size = 300
 pygame.init()
 window = pygame.display.set_mode((window_size, window_size))
+
 
 
 def draw(surface, x, y, color, size):
@@ -48,15 +50,35 @@ def rule(particules1, particules2, g):
             a["vy"] *=-1        
 
 
-yellow = create(100, "yellow")
-red = create(100, "red")
+yellow = create(window_size // 3, "yellow")
+red = create(window_size // 3, "red")
+blue = create(window_size // 3, "blue")
+white = create(window_size // 3, "white")
 
 run = True
 while run:
     window.fill(0)
-    rule(red, red, 0.1)
-    rule(red, yellow, -0.15)
-    rule(yellow, yellow, -0.1)
+
+    rule(red, red, random.uniform(-1,1))
+    rule(red, yellow, random.uniform(-1,1))
+    rule(red, blue, random.uniform(-1,1))
+    rule(red, white, random.uniform(-1,1))
+
+    rule(yellow, yellow, random.uniform(-1,1))
+    rule(yellow, red, random.uniform(-1,1))
+    rule(yellow, blue, random.uniform(-1,1))
+    rule(yellow, white, random.uniform(-1,1))
+
+    rule(blue, yellow, random.uniform(-1,1))
+    rule(blue, red, random.uniform(-1,1))
+    rule(blue, blue, random.uniform(-1,1))
+    rule(blue, white, random.uniform(-1,1))
+
+    rule(white, yellow, random.uniform(-1,1))
+    rule(white, red, random.uniform(-1,1))
+    rule(white, blue, random.uniform(-1,1))
+    rule(white, white, random.uniform(-1,1))
+
     for i in range(len(particules)):
         draw(window,  particules[i]["x"], particules[i]["y"], particules[i]["color"], 3)
         
