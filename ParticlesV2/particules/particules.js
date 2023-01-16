@@ -994,6 +994,8 @@ const setupGUI = () => {
     )
   }
 
+  settings.gui.close();
+    
 }
 
 // Seedable 'decent' random generator
