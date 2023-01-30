@@ -109,5 +109,9 @@ update();
 - Our website: https://particules.charbalec.repl.co/
 - Hosted by Replit
 
+## Game of Life
+- Game of life is a cellular automata which also demonstrates emergence and chaos.
+- Python code for GOL (John Conway): https://github.com/CharbK/Game-of-Life
+
 ## Code
 - By Charbel K. and Alec R. 2023
